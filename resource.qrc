@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>figure/back.ico</file>
+        <file>figure/back0.ico</file>
+        <file>figure/back1.ico</file>
+        <file>figure/flag0.ico</file>
+        <file>figure/flag1.ico</file>
+        <file>figure/question0.ico</file>
+        <file>figure/question1.ico</file>
+        <file>figure/mine.ico</file>
+        <file>figure/timg.jpg</file>
+    </qresource>
+</RCC>
