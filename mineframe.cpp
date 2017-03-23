@@ -22,6 +22,7 @@ void MineFrame::onMouseLeftPress(QPoint pos)
         emit GameBegin();
     }
 
+    //根据鼠标位置，计算当前控件
     int index=pos.y()/32*colnum+pos.x()/32;
     if(index>=m_pbtnlist.size())return;
 
@@ -30,7 +31,7 @@ void MineFrame::onMouseLeftPress(QPoint pos)
     {
         btn->state=-2;
         btn->buttonshow();
-        //显示所有位置
+        //展开所有位置
         for(int i=0;i<m_pbtnlist.size();i++)
         {
             btn=m_pbtnlist[i];
@@ -62,6 +63,7 @@ void MineFrame::onMouseRightPress(QPoint pos)
 
     QMyPushButton *btn=m_pbtnlist[index];
 
+    //右键标记，发送剩余雷数的计算
     if(btn->state!=-1&&btn->state!=-2)
     {
         if(btn->state==1)emit MineFlag(1);

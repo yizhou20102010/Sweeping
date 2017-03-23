@@ -6,7 +6,6 @@ QMyPushButton::QMyPushButton(QWidget *parent) : QPushButton(parent)
                                        border-style:outset;border: 1px groove gray;border-radius: 1px;}"
                                     "QPushButton:hover{background-image: url(:/image/figure/back1.ico)}");
 }
-
 void QMyPushButton::mousePressEvent(QMouseEvent *event)
 {
     if(event->buttons() & Qt::LeftButton)
@@ -22,25 +21,25 @@ void QMyPushButton::mousePressEvent(QMouseEvent *event)
 void QMyPushButton::buttonshow()
 {
     switch (state) {
-    case -2:
+    case -2: //炸雷
         this->setStyleSheet("QPushButton{background-image: url(:/image/figure/mine.ico); border-style:inset;\
                                                             border: 1px groove gray; font-size:18px; font-family: Arial}");
         break;
-    case -1:
+    case -1: // 已翻开
         this->setStyleSheet("QPushButton{background-image: url(:/image/figure/back.ico); border-style:inset;\
                                                             border: 1px groove gray; font-size:18px; font-family: Arial}");
         break;
-    case 0:
+    case 0: //原始状态
         this->setStyleSheet("QPushButton{background-image: url(:/image/figure/back0.ico); \
                                            border-style:outset;border: 1px groove gray;border-radius: 1px;}"
                                         "QPushButton:hover{background-image: url(:/image/figure/back1.ico)}");
         break;
-    case 1:
+    case 1: //右键标记
         this->setStyleSheet("QPushButton{background-image: url(:/image/figure/flag0.ico); \
                     border-style:outset;border: 1px groove gray;border-radius: 1px;}"
                     "QPushButton:hover{background-image: url(:/image/figure/flag1.ico)}");
         break;
-    case 2:
+    case 2: //右键问号
         this->setStyleSheet("QPushButton{background-image: url(:/image/figure/question0.ico); \
                            border-style:outset;border: 1px groove gray;border-radius: 1px;}"
                           "QPushButton:hover{background-image: url(:/image/figure/question1.ico)}");
